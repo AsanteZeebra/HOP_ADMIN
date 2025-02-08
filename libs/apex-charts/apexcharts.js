@@ -5,3 +5,4 @@ try {
 } catch (e) {}
 
 export { ApexCharts };
+
