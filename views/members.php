@@ -59,7 +59,7 @@
                   <div class="card-body">
 
                     <p class="mb-1">Total Members</p>
-                    <h4 class="card-title mb-3">350,256</h4>
+                    <h4 class="card-title mb-3" id="ctotal"></h4>
                     <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
                   </div>
                 </div>
@@ -71,7 +71,7 @@
                   <div class="card-body">
 
                     <p class="mb-1">Men</p>
-                    <h4 class="card-title mb-3">150,256</h4>
+                    <h4 class="card-title mb-3" id="tmen"></h4>
                     <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
                   </div>
                 </div>
@@ -82,7 +82,7 @@
                   <div class="card-body">
 
                     <p class="mb-1">Women</p>
-                    <h4 class="card-title mb-3">350,256</h4>
+                    <h4 class="card-title mb-3" id="twmen"></h4>
                     <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
                   </div>
                 </div>
@@ -94,7 +94,7 @@
                   <div class="card-body">
 
                     <p class="mb-1">Youth</p>
-                    <h4 class="card-title mb-3">350,256</h4>
+                    <h4 class="card-title mb-3" id="tyouth"></h4>
                     <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
                   </div>
                 </div>
@@ -172,6 +172,7 @@
   <?php
   include_once('scripts.php');
   ?>
+  <script src="../api/members/members.js"></script>
 </body>
 
 </html>
