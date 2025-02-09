@@ -72,7 +72,7 @@
 
                     <p class="mb-1">Men</p>
                     <h4 class="card-title mb-3" id="tmen"></h4>
-                    <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
+                    <small class="text-success fw-medium" id="mpercent"></small>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@
 
                     <p class="mb-1">Women</p>
                     <h4 class="card-title mb-3" id="twmen"></h4>
-                    <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
+                    <small class="text-success fw-medium" id="wmpercent"></small>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@
 
                     <p class="mb-1">Youth</p>
                     <h4 class="card-title mb-3" id="tyouth"></h4>
-                    <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
+                    <small class="text-success fw-medium" id="ypercent"><i class="bx bx-up-arrow-alt"></i></small>
                   </div>
                 </div>
               </div>
@@ -117,12 +117,12 @@
                               <img src="../assets/img/icons/unicons/wallet.png" alt="User" />
                             </div>
                             <div>
-                              <p class="mb-0">Growth difference</p>
+                              <p class="mb-0">Growth difference as compared to last year</p>
                               <div class="d-flex align-items-center">
-                                <h6 class="mb-0 me-1">25,699</h6>
-                                <small class="text-success fw-medium">
+                                <h6 class="mb-0 me-1" id="growthd">25,699</h6>
+                                <small class="text-success fw-medium" id="perdiff">
                                   <i class="bx bx-chevron-up bx-lg"></i>
-                                  42.9%
+                                 
                                 </small>
                               </div>
                             </div>

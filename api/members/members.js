@@ -36,6 +36,24 @@ $(document).ready(function() {
         }
     });
 
+      //count men Percentage
+      $.ajax({
+        
+        url: 'http://localhost/HOP_ADMIN/api/members/men_percentage.php',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            if (data.error) {
+                $('#mpercent').text('Error: ' + data.error);
+            } else {
+                $('#mpercent').text(data.male_percentage+'%');
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            $('#mpercent').text('AJAX Error: ' + textStatus);
+        }
+    });
+
 
     //count women
     $.ajax({
@@ -55,7 +73,28 @@ $(document).ready(function() {
         }
     });
 
-       //count women
+//women percentage
+    $.ajax({
+        url: 'http://localhost/HOP_ADMIN/api/members/women_percentage.php',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          
+            if (data.error) {
+                $('#wmpercent').text('Error: ' + data.error);
+            } else {
+                // Ensure the correct key is used
+                let percentage = data.female_percentage || 'Invalid Data';
+                $('#wmpercent').text(percentage + '%');
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("AJAX Error:", textStatus, errorThrown, jqXHR.responseText);
+            $('#wmpercent').text('AJAX Error: ' + textStatus);
+        }
+    });
+
+       //count youth
        $.ajax({
         
         url: 'http://localhost/HOP_ADMIN/api/members/count_youth.php',
@@ -70,6 +109,49 @@ $(document).ready(function() {
         },
         error: function(jqXHR, textStatus, errorThrown) {
             $('#tyouth').text('AJAX Error: ' + textStatus);
+        }
+    });
+//youth percentage
+    $.ajax({
+        url: 'http://localhost/HOP_ADMIN/api/members/youth_percentage.php',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          
+            if (data.error) {
+                $('#ypercent').text('Error: ' + data.error);
+            } else {
+                // Ensure the correct key is used
+                let percentage = data.youth_percentage || 'Invalid Data';
+                $('#ypercent').text(percentage + '%');
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("AJAX Error:", textStatus, errorThrown, jqXHR.responseText);
+            $('#ypercent').text('AJAX Error: ' + textStatus);
+        }
+    });
+
+
+    //percentage growth%
+    $.ajax({
+        url: 'http://localhost/HOP_ADMIN/api/members/youth_percentage.php',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          
+            if (data.error) {
+                $('#growthd').text('Error: ' + data.error);
+            } else {
+                // Ensure the correct key is used
+                let percentage = data.percentage_difference || 'Invalid Data';
+                $('#perdiff').text(percentage + '%');
+                $("growthd").text(data.difference);
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("AJAX Error:", textStatus, errorThrown, jqXHR.responseText);
+            $('#growthd').text('AJAX Error: ' + textStatus);
         }
     });
 
